@@ -2,8 +2,10 @@ import csv
 
 text = open("2600-0.txt", "r", encoding="utf-8").read().lower()
 
+#Total no of words
 words = text.split()
 
+#Total alphabet and punctuations
 alphabet, punctuation = [], []
 alphabet_c = digit_c = punctuation_c = 0
 for i in range(len(text)):
@@ -19,7 +21,8 @@ for i in range(len(text)):
 print("no of alphabets:", len(alphabet))
 print("no of punctuation:", len(punctuation))
 
-def counter(x):
+# Word frequency of all words:
+def word_counter(x):
     count = dict()
     wordss = x.split()
     for w in wordss:
@@ -30,7 +33,9 @@ def counter(x):
     return count
 
 
-tf_word = counter(text)
+tf_word = word_counter(text)
+
+# Alphabet frequency and punctuation frequency
 
 def counter(x):
     count = dict()
@@ -45,6 +50,7 @@ def counter(x):
 tf_alphabet = counter(alphabet)
 tf_punctuation = counter(punctuation)
 
+# Alphabetic word frequencies
 alpha_word = dict()
 for word in words:
     if word[0] in alpha_word:
@@ -52,16 +58,21 @@ for word in words:
     else:
         alpha_word[word[0]] = 1
 
+# Starting and ending with vowel
+
 starting_vowel = []
 for word in words:
     if word[0] in ['a', 'e', 'i', 'o', 'u'] and word[-1] in ['a', 'e', 'i', 'o', 'u']:
         starting_vowel.append(word)
 
+
+# Total Sentences
 sentences = text.replace("\n", "").split("." or "?" or "...")
-print(sentences)
+# print(sentences)
 
-print(len(sentences))
+# print(len(sentences))
 
+# Longest, shortest and Average length of the sentences
 maxl = 0
 minl = 1
 list = []
@@ -81,7 +92,7 @@ with open("test.csv", "w") as csv_file:
     writer.writerow(["Total_no_Words", len(words)])
     writer.writerow(["No_of_alphabets", len(alphabet)])
     writer.writerow(["No_of_punctuations", len(punctuation)])
-    writer.writerow(["Word_freq", counter(text)])
+    writer.writerow(["Word_freq", word_counter(text)])
     writer.writerow(["Alphabet_freq", counter(alphabet)])
     writer.writerow(["Punctuation_freq", counter(punctuation)])
     writer.writerow(["Alphabetic word frequency", alpha_word])
