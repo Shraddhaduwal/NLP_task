@@ -4,7 +4,7 @@ This is the repo which helps in doing simple operations in a corpus or a text fi
 
 ## Data
 
-The corpus used is can be found [link here](http://www.gutenberg.org/files/2600/2600-0.txt)
+The corpus used, can be found [here](http://www.gutenberg.org/files/2600/2600-0.txt)
 
 ## Results
 
