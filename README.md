@@ -8,4 +8,4 @@ The corpus used, can be found [here](http://www.gutenberg.org/files/2600/2600-0.
 
 ## Results
 
-All the results are stored in different csv files and kept in `Results` folder. There are unit test functions to individually to confirm if the functions give accurate results.
+All the results are stored in different csv files and kept in `Results` folder. There are unit test functions to individually to confirm if the functions give accurate results. It also shows the execution time of each functions
