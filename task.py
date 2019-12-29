@@ -3,10 +3,12 @@ from utils.util import timeit
 
 alphabet, punctuation = [], []
 
+
 @timeit
 def total_words(words):
     """Total no of words"""
     return len(words)
+
 
 @timeit
 def total_alphabet_and_punctuation(words):
@@ -24,6 +26,7 @@ def total_alphabet_and_punctuation(words):
                 punctuation.append(word[i])
     return [len(alphabet), len(punctuation)]
 
+
 @timeit
 def word_frequency(words):
     """Word frequency of all words"""
@@ -35,6 +38,7 @@ def word_frequency(words):
             count[word] = 1
 
     return count
+
 
 @timeit
 def alphabet_and_punctuation_frequencies(text_file):
@@ -48,6 +52,7 @@ def alphabet_and_punctuation_frequencies(text_file):
 
     return count
 
+
 @timeit
 def alphabetic_word_frequencies(words):
     """Alphabetic word frequencies like a--> 2000"""
@@ -60,6 +65,7 @@ def alphabetic_word_frequencies(words):
 
     return alpha_word
 
+
 @timeit
 def starting_and_ending_with_vowel(words):
     """Starting and ending with vowel"""
@@ -70,10 +76,12 @@ def starting_and_ending_with_vowel(words):
 
     return starting_vowel
 
+
 @timeit
 def total_sentences(sentences):
     """Total Sentences"""
     return len(sentences)
+
 
 @timeit
 def length_of_sentences(sentences):
